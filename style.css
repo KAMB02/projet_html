@@ -1,0 +1,56 @@
+header{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba( 0,0,0, 0.6)), url("./image/image1.jpg");
+    height: 100vh;
+    background-size: cover ;
+    background-position: center;
+    position: relative;
+}
+
+.logo a {
+    color: #fff;
+    padding: 0px 20px;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-transform: uppercase;
+    text-decoration: None;
+    font-weight: 900;
+    text-shadow: rgb(0,0,0,0.7);
+
+}
+
+.logo span{
+    color: rgb(212, 49, 9);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+ul{
+    list-style: none;
+    float: right;
+    display: flex;
+    margin-top: 20px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    margin: 10px;
+    font-weight: 500;
+    transition: 0.6s ease;
+    cursor: pointer;
+}
+
+ul li a:hover{
+    background: #fff;
+    color: #000;
+}
+
+ul li.active a{
+    background: #fff;
+    color: #000;
+}
