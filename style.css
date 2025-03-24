@@ -14,11 +14,29 @@ body{
 }
 
 #gauche {
-    width: 338px;
-    height: all;
+    width: 20%;
+    height: 1000px;
     float: left;
+    border-color: #000000;
     font: normal 13px "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
+
+#centre {
+    width: 60%;
+    height: 1000px;
+    float: left;
+    border-color: #000000;
+    font: normal 13px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#droit{
+    width: 20%;
+    height: 1000px;
+    float: left;
+    border-color: #000000;
+    font: normal 13px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
 
 .header-log{
     display: inline-block;
