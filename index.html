@@ -4,61 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     
     <title>Document</title>
 </head>
 <body>
-    <div class="principale">
-        <div class="logo">
-            <a href="#">Logo
-                <span>Y</span>
-            </a>
+    <header>
+        <div class="header-log">
+            <a href="/">Mon blog</a>
         </div>
-        <ul>
-            <li class="active">
-                <a href="#">Acceuil</a>
-            </li>
-            <li>
-                <a href="#">Service</a>
-            </li>
-            <li>
-                <a href="#">Blog</a>
-            </li>
-            <li>
-                <a href="#">A propos de nous</a>
-            </li>
-            <li>
-                <a href="#">Nous contacter</a>
-            </li>
-        </ul>
-    </div>
+    
+        <nav class="nav">
+            <ul class="nav-items">
+                <li class="nav-item"><a href="">Accueil</a></li>
+                <li class="nav-item"><a href="">Qui sommes nous</a></li>
+                <li class="nav-item"><a href="">Nos services</a></li>
+                <li class="nav-item"><a href="">Categorie</a></li>
+                <li class="nav-item"><a href="">Contactez nous</a></li>             
+            </ul>
+            <div class="nav-search">
+                <div class="nav-search__el">
+                    <i class="las la-search"></i>
+                    
+                    <input type="text" placeholder="Recherche" class="search-input"/>
+                </div>
+            </div>   
+        </nav>       
+      </header> 
 
     <!-- Elements du cote gauche de la page  -->
     <div id="gauche">
         <form>
             <label for="options">Cours :</label>
             <select id="options" onchange="navigateToCours()">
-                <option value="" selected disabled>-- Sélectionnez une option --</option>
-                <option value="Licence_1"> Licence 1</option>
-                <option value="Licence_2">Licence 2</option>
-                <option value="Licence_3">Licence 3</option>
-                <option value="Master_1">Master 1</option>
-                <option value="Master_2">Master 2</option>
-                <option value="Doctorat_1">Doctorat 1</option>
-                <option value="Doctorat 2">Doctorat 2</option>
+                <option value="" selected disabled>--Niveau--</option>
+                <option value="cours/Licence_1"> Licence 1</option>
+                <option value="cours/Licence_2">Licence 2</option>
+                <option value="cours/Licence_3">Licence 3</option>
+                <option value="cours/Master_1">Master 1</option>
+                <option value="cours/Master_2">Master 2</option>
+                <option value="cours/Doctorat_1">Doctorat 1</option>
+                <option value="cours/Doctorat 2">Doctorat 2</option>
             </select>
         </form>
         <form>
             <label for="exos">TD & Examen Corriger :</label>
             <select id="exos" onchange="navigateToExos()">
-                <option value="" selected disabled>-- Sélectionnez une option --</option>
-                <option value="exos_Licence_1"> Licence 1</option>
-                <option value="exos_Licence_2">Licence 2</option>
-                <option value="exo_Licence_3">Licence 3</option>
-                <option value="exos_Master_1">Master 1</option>
-                <option value="exos_Master_2">Master 2</option>
-                <option value="exos_Doctorat_1">Doctorat 1</option>
-                <option value="exos_Doctorat 2">Doctorat 2</option>
+                <option value="" selected disabled>-- Niveau --</option>
+                <option value="exos/Licence_1">Licence 1</option>
+                <option value="exos/Licence_2">Licence 2</option>
+                <option value="exos/Licence_3">Licence 3</option>
+                <option value="exos/Master_1">Master 1</option>
+                <option value="exos/Master_2">Master 2</option>
+                <option value="exos/Doctorat_1">Doctorat 1</option>
+                <option value="exos/Doctorat 2">Doctorat 2</option>
             </select>
         </form>
     </div>
@@ -70,26 +69,5 @@
 
     <!-- elements du cote droit de la page -->
     <div id="droit"></div>
-
-    <script>
-        // Fonction pour le formulaire "Cours"
-        function navigateToCours() {
-            const selectElement = document.getElementById("options");
-            const selectedValue = selectElement.value;
-            if (selectedValue) {
-                window.location.href = selectedValue;
-            }
-        }
-
-        // Fonction pour le formulaire "TD & Examens corrigés"
-        function navigateToExos() {
-            const selectElement = document.getElementById("exos");
-            const selectedValue = selectElement.value;
-            if (selectedValue) {
-                window.location.href = selectedValue;
-            }
-        }
-    </script>
-
 </body>
 </html>

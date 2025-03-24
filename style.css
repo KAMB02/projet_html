@@ -1,56 +1,91 @@
-header{
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba( 0,0,0, 0.6)), url("./image/image1.jpg");
-    height: 100vh;
-    background-size: cover ;
-    background-position: center;
-    position: relative;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: century;
 }
 
-.logo a {
-    color: #fff;
-    padding: 0px 20px;
-    border: 1px solid #fff;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    text-transform: uppercase;
-    text-decoration: None;
-    font-weight: 900;
-    text-shadow: rgb(0,0,0,0.7);
-
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background:#9da4a9 ;
+    font-family: 'Montserrat',sans-serif;
 }
 
-.logo span{
-    color: rgb(212, 49, 9);
-    font-weight: bold;
-    font-size: 2rem;
+#gauche {
+    width: 338px;
+    height: all;
+    float: left;
+    font: normal 13px "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
-ul{
-    list-style: none;
-    float: right;
-    display: flex;
-    margin-top: 20px;
+.header-log{
+    display: inline-block;
+    width:90%;
+    padding: 10px 30px;
 }
 
-ul li a{
+.header-log a{
     text-decoration: none;
-    color: #fff;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    border: 1px solid transparent;
-    margin: 10px;
-    font-weight: 500;
-    transition: 0.6s ease;
-    cursor: pointer;
+    color: #005a48;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-ul li a:hover{
-    background: #fff;
-    color: #000;
+.nav{
+    display: inline-block;
+    width: 100%;
+    padding: 15px 10px;
+    background-color: bisque;
 }
 
-ul li.active a{
-    background: #fff;
-    color: #000;
+.nav-items{
+    display: inline-block;
+    width: calc(70%-100px);
+    vertical-align: middle;
+    text-align: center;
+   
+}
+
+.nav-item{
+    display: inline-block;
+    margin: 0px 10px;
+    
+}
+
+.nav-item a{
+    text-decoration: none;
+    color: #005a48;
+    font-weight: 100;
+}    
+
+.nav-search{
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    text-align: center;
+}
+.nav-search__el{
+    background: #c5c5c5;
+    width: 40%;
+    padding: 5px;
+    border-radius: 20px; 
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items:center;
+    overflow: hidden;  
+}
+
+.search-input{
+    background: #c5c5c5;
+    border: none;
+    flex-basis: 60%;
+    outline: none;
+}
+
+.nav-search__el i{
+    flex-basis: 40%;
+
 }
