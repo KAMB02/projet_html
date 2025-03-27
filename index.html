@@ -30,45 +30,46 @@
             </div>   
         </nav>       
       </header> 
+    <div class="corps">
+        <!-- Elements du cote gauche de la page  -->
+        <div id="gauche">
+            <form>
+                <label for="options"></label>
+                <select id="options" onchange="navigateToCours()">
+                    <option value="" selected disabled>Cours </option>
+                    <option value="cours/Licence_1"> Licence 1</option>
+                    <option value="cours/Licence_2">Licence 2</option>
+                    <option value="cours/Licence_3">Licence 3</option>
+                    <option value="cours/Master_1">Master 1</option>
+                    <option value="cours/Master_2">Master 2</option>
+                    <option value="cours/Doctorat_1">Doctorat 1</option>
+                    <option value="cours/Doctorat 2">Doctorat 2</option>
+                </select>
+            </form>
+            <form>
+                <label for="exos"> </label>
+                <select id="exos" onchange="navigateToExos()">
+                    <option value="" selected disabled>TD & Examen Corriger</option>
+                    <option value="exos/Licence_1">Licence 1</option>
+                    <option value="exos/Licence_2">Licence 2</option>
+                    <option value="exos/Licence_3">Licence 3</option>
+                    <option value="exos/Master_1">Master 1</option>
+                    <option value="exos/Master_2">Master 2</option>
+                    <option value="exos/Doctorat_1">Doctorat 1</option>
+                    <option value="exos/Doctorat 2">Doctorat 2</option>
+                </select>
+            </form>
+        </div>
 
-    <!-- Elements du cote gauche de la page  -->
-    <div id="gauche">
-        <form>
-            <label for="options"></label>
-            <select id="options" onchange="navigateToCours()">
-                <option value="" selected disabled>Cours </option>
-                <option value="cours/Licence_1"> Licence 1</option>
-                <option value="cours/Licence_2">Licence 2</option>
-                <option value="cours/Licence_3">Licence 3</option>
-                <option value="cours/Master_1">Master 1</option>
-                <option value="cours/Master_2">Master 2</option>
-                <option value="cours/Doctorat_1">Doctorat 1</option>
-                <option value="cours/Doctorat 2">Doctorat 2</option>
-            </select>
-        </form>
-        <form>
-            <label for="exos"> </label>
-            <select id="exos" onchange="navigateToExos()">
-                <option value="" selected disabled>TD & Examen Corriger</option>
-                <option value="exos/Licence_1">Licence 1</option>
-                <option value="exos/Licence_2">Licence 2</option>
-                <option value="exos/Licence_3">Licence 3</option>
-                <option value="exos/Master_1">Master 1</option>
-                <option value="exos/Master_2">Master 2</option>
-                <option value="exos/Doctorat_1">Doctorat 1</option>
-                <option value="exos/Doctorat 2">Doctorat 2</option>
-            </select>
-        </form>
-    </div>
+        <!-- elements du  centre de la page -->
+        <div id="centre">
 
-    <!-- elements du  centre de la page -->
-    <div id="centre">
+        </div>   
 
-    </div>   
+        <!-- elements du cote droit de la page -->
+        <div id="droit">
 
-    <!-- elements du cote droit de la page -->
-    <div id="droit">
-
+        </div>
     </div>
 </body>
 </html>
