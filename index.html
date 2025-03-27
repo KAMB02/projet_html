@@ -5,71 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    
-    <title>Document</title>
+    <meta property="image" content="image.png" />
+    <title>Cours et Exercices par Niveau</title>
+
 </head>
 <body>
-    <header>
-        <div class="header-log">
-            <a href="/">Mon blog</a>
-        </div>
-    
-        <nav class="nav">
-            <ul class="nav-items">
-                <li class="nav-item"><a href="">Accueil</a></li>
-                <li class="nav-item"><a href="">Qui sommes nous</a></li>
-                <li class="nav-item"><a href="">Nos services</a></li>
-                <li class="nav-item"><a href="mailto:kallouan25@gmail.com">Contactez nous</a></li>             
-            </ul>
-            <div class="nav-search">
-                <div class="nav-search__el">
-                    <i class="las la-search"></i>
-                    
-                    <input type="text" placeholder="Recherche" class="search-input"/>
-                </div>
-            </div>   
-        </nav>       
-      </header> 
-    <div class="corps">
-        <!-- Elements du cote gauche de la page  -->
-        <div id="gauche">
-            <form>
-                <label for="options"></label>
-                <select id="options" onchange="navigateToCours()">
-                    <option value="" selected disabled>Cours </option>
-                    <option value="cours/Licence_1"> Licence 1</option>
-                    <option value="cours/Licence_2">Licence 2</option>
-                    <option value="cours/Licence_3">Licence 3</option>
-                    <option value="cours/Master_1">Master 1</option>
-                    <option value="cours/Master_2">Master 2</option>
-                    <option value="cours/Doctorat_1">Doctorat 1</option>
-                    <option value="cours/Doctorat 2">Doctorat 2</option>
-                </select>
-            </form>
-            <form>
-                <label for="exos"> </label>
-                <select id="exos" onchange="navigateToExos()">
-                    <option value="" selected disabled>TD & Examen Corriger</option>
-                    <option value="exos/Licence_1">Licence 1</option>
-                    <option value="exos/Licence_2">Licence 2</option>
-                    <option value="exos/Licence_3">Licence 3</option>
-                    <option value="exos/Master_1">Master 1</option>
-                    <option value="exos/Master_2">Master 2</option>
-                    <option value="exos/Doctorat_1">Doctorat 1</option>
-                    <option value="exos/Doctorat 2">Doctorat 2</option>
-                </select>
-            </form>
-        </div>
+    <!-- Barre latérale gauche -->
+    <div class="sidebar-left">
+        <h3>Cours</h3>
+        <ul>
+            <li onclick="loadContent('Licence 1')">Licence 1</li>
+            <li onclick="loadContent('Licence 2')">Licence 2</li>
+            <li onclick="loadContent('Licence 3')">Licence 3</li>
+            <li onclick="loadContent('Master')">Master</li>
+            <li onclick="loadContent('Doctorat')">Doctorat</li>
+        </ul>
+        <h3>TD & Examen Corriger</h3>
+        <ul>
+            <li onclick="loadContent('Licence1')">Licence 1</li>
+            <li onclick="loadContent('Licence2')">Licence 2</li>
+            <li onclick="loadContent('Licence3')">Licence 3</li>
+            <li onclick="loadContent('Masterm')">Master</li>
+            <li onclick="loadContent('Doctoratd')">Doctorat</li>
+        </ul>
+    </div>
 
-        <!-- elements du  centre de la page -->
-        <div id="centre">
-
-        </div>   
-
-        <!-- elements du cote droit de la page -->
-        <div id="droit">
-
+    <!-- Zone centrale -->
+    <div class="main-content">
+        <div class="content" id="content">
+            <h3>Bienvenue</h3>
+            <p>Sélectionnez un niveau académique à gauche pour afficher les cours et exercices correspondants ici.</p>
         </div>
     </div>
+
+    <!-- Barre latérale droite -->
+    <div class="sidebar-right">
+        <h3>Informations</h3>
+        <ul class="nav-items">
+            <li class="nav-item"><a href="">Accueil</a></li>
+            <li class="nav-item"><a href="">Qui sommes nous</a></li>
+            <li class="nav-item"><a href="">Nos services</a></li>
+            <li class="nav-item"><a href="mailto:kallouan25@gmail.com">Contactez nous</a></li>             
+        </ul>
+    </div>
+
 </body>
 </html>
