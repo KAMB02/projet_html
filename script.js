@@ -13,6 +13,7 @@ function navigateToExos() {
     const selectedValue = selectElement.value;
     if (selectedValue) {
         window.location.href = selectedValue;
-        print(salut)
     }
 }
+
+console.log("salut")
