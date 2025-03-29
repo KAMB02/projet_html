@@ -1,33 +1,26 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: century;
-    text-decoration: None;
+    text-decoration: none;
 }
 
 body {
-    height: 100%;
+    height: 100vh; /* Utiliser la hauteur totale de l'écran */
     display: flex;
+    flex-direction: row; /* Organise les enfants horizontalement */
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
-
-/* Partie gauche
-.sidebar-left {
-    width: 20%;
-    background-color: #FF5733;
-    padding: 15px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-} */
-
 /* Partie centrale */
-.main-content {
-    width: 60%;
+.centre {
+    flex: 3; /* Occupe une proportion définie (par exemple, 60%) */
     padding: 20px;
     background-color: #ffffff;
     overflow-y: auto;
+    border-radius: 8px;
 }
 
 /* Stylisation des titres et listes */
@@ -40,18 +33,6 @@ ul {
     padding: 0;
 }
 
-/* ul li {
-    padding: 8px;
-    margin: 5px 0;
-    background-color: #dc664c;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-ul li:hover {
-    background-color: #c16767;
-} */
-
 /* Contenu dynamique */
 .content {
     text-align: center;
@@ -59,66 +40,64 @@ ul li:hover {
     color: #555;
 }
 
+/* Partie gauche */
+.gauche {
+    flex: 1; /* Ajuste la largeur pour occuper une proportion définie (par exemple, 20%) */
+    background-color: #FF8C00; /* Orange vif */
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    border-radius:0px 0px 8px;
+    overflow-y: auto; /* Permet le défilement si le contenu dépasse la hauteur */
+}
 
+/* Style des titres dans la partie gauche */
+.gauche h3 {
+    color: #ffffff;
+}
 
-/* ++++++++++++++++++++++++++++++++++++++++ */
-    /* Partie gauche */
-    .sidebar-left {
-        width: 20%;
-        background-color: #FF8C00; /* Orange vif représentant la Côte d'Ivoire */
-        padding: 15px;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-        color: #ffffff; /* Texte blanc pour un bon contraste */
-    }
+/* Éléments de la liste dans la partie gauche */
+.gauche ul li {
+    background-color: #d8d5cf;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #111111;
+}
 
-    /* Style des titres dans la partie gauche */
-    .sidebar-left h3 {
-        color: #ffffff; /* Texte blanc pour ressortir sur l'orange */
-    }
+.gauche ul li:hover {
+    background-color: #FF4500;
+    color: #ffffff;
+}
 
-    /* Éléments de la liste dans la partie gauche */
-    .sidebar-left ul li {
-        background-color: #d8d5cf; /* Une nuance légèrement différente d'orange */
-        margin: 5px 0;
-        padding: 8px;
-        border-radius: 5px;
-        cursor: pointer;
-        color: #111111; /* Texte blanc */
-    }
+/* Partie droite */
+.droite {
+    flex: 1; /* Ajuste la largeur pour occuper une proportion définie (par exemple, 20%) */
+    background-color: #2ECC71;
+    padding: 15px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    border-radius:0px 8px 0px;
+    overflow-y: auto; /* Permet le défilement si le contenu dépasse la hauteur */
+}
 
-    .sidebar-left ul li:hover {
-        background-color: #FF4500; /* Orange plus foncé au survol */
-        color: #ffffff
-    }
+/* Style des titres dans la partie droite */
+.droite h3 {
+    color: #ffffff;
+}
 
-/* =================================== */
+/* Éléments de la liste dans la partie droite */
+.droite ul li {
+    background-color: #d8d5cf;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #111111;
+}
 
-    /* Partie droite */
-    .sidebar-right {
-        width: 20%;
-        background-color: #2ECC71; /* Vert clair */
-        padding: 15px;
-        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-        color: #ffffff; /* Texte blanc pour le contraste */
-    }
-
-    /* Styling des titres dans la partie droite */
-    .sidebar-right h3 {
-        color: #ffffff; /* Assurez-vous que le texte reste visible */
-    }
-
-    /* Styling des éléments de la liste dans la partie droite */
-    .sidebar-right ul li {
-        background-color: #d8d5cf; /* Une nuance différente de vert */
-        margin: 5px 0;
-        padding: 8px;
-        text-decoration: None;
-        border-radius: 5px;
-        cursor: pointer;
-        color: #111111; 
-    }
-
-    .sidebar-right ul li:hover {
-        background-color: #1E8449; /* Une couleur légèrement foncée au survol */
-        color:#ffffff00;
-    }
+.droite ul li:hover {
+    background-color: #1E8449;
+    color: #ffffff;
+}
