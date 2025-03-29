@@ -1,3 +1,12 @@
+
+    function showHomeContent() {
+        const contentDiv = document.getElementById('content');
+        contentDiv.innerHTML = `
+            <h3>Bienvenue</h3>
+            <p>Sélectionnez un niveau académique à gauche pour afficher les cours et exercices correspondants ici.</p>
+        `;
+    }
+
 function loadContent(niveau) {
     const contentDiv = document.getElementById('content');
 
@@ -31,8 +40,7 @@ function loadContent(niveau) {
         `;
     } else {
         contentDiv.innerHTML = `
-            <h3>${niveau}</h3>
-            <p>Voici les exos et exercices corrigés pour le niveau ${niveau}. Sélectionnez un sujet pour plus de détails.</p>
+            <p>Aucun disponible !.</p>
         `
     }
 

@@ -13,19 +13,33 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
-/* Partie centrale */
 .centre {
-    flex: 3; /* Occupe une proportion définie (par exemple, 60%) */
+    flex: 3;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.333), rgba(0, 0, 0, 0.393)), url("image.jpg");
+    background-size: cover;
+    background-position: center;
     padding: 20px;
     background-color: #ffffff;
     overflow-y: auto;
     border-radius: 8px;
+    filter: brightness(80%); /* Assombrir l'image pour mettre en valeur le texte */
+}
+
+.acc{
+    text-align: center;
+    background-color: #ccb0a6;
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px;
 }
 
 /* Stylisation des titres et listes */
 h3 {
     color: #444;
+    font-weight: bold;
 }
 
 ul {
