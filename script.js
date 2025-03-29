@@ -1,11 +1,18 @@
 
-    function showHomeContent() {
-        const contentDiv = document.getElementById('content');
-        contentDiv.innerHTML = `
-            <h3>Bienvenue</h3>
-            <p>Sélectionnez un niveau académique à gauche pour afficher les cours et exercices correspondants ici.</p>
-        `;
-    }
+function showHomeContent() {
+    const contentDiv = document.getElementById('content');
+    contentDiv.innerHTML = `
+        <h3>Bienvenue sur notre site de cours et exercices</h3>
+        <p><br>Sélectionnez un niveau académique à gauche pour afficher les cours et exercices correspondants ici.</p>
+        <p>Vous pouvez également consulter les TD et examens corrigés.</p>
+        <p>Nous vous souhaitons une bonne navigation !</p>
+        <p>Pour toute question ou suggestion, n'hésitez pas à nous contacter via la section "Nous suivre" à droite.</p>
+        <p>Nous sommes là pour vous aider dans votre apprentissage.</p>
+        <p>Merci de votre visite !</p>
+        <p>Nous espérons que vous trouverez les ressources utiles pour vos études.</p>
+        <p>Bonne chance dans vos études et à bientôt !</p>    `;
+}
+
 
 function loadContent(niveau) {
     const contentDiv = document.getElementById('content');
@@ -53,7 +60,7 @@ function loadContent(niveau) {
         contentDiv.style.fontSize = '10px';
         contentDiv.style.marginBottom = '20px';
         contentDiv.style.fontWeight = 'bold';
-        contentDiv.style.textTransform = 'uppercase' ;
+        contentDiv.style.textTransform = 'uppercase';
         contentDiv.style.boxSizing = 'border-box';
         contentDiv.style.borderRadius = '10px';
         contentDiv.style.textAlign = 'left';

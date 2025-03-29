@@ -25,15 +25,18 @@ body {
     filter: brightness(80%); /* Assombrir l'image pour mettre en valeur le texte */
 }
 
-.acc{
-    text-align: center;
-    background-color: #ccb0a6;
-    font-size: 24px;
-    color: #ffffff;
+.acc {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    line-height: 2;
+    font-size: 13px;
     margin-bottom: 20px;
-    font-weight: bold; 
-    border-radius: 20px;
-    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    text-align: left;
 }
 
 /* Stylisation des titres et listes */
