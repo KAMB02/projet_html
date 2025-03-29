@@ -53,7 +53,7 @@ function loadContent(niveau) {
         contentDiv.style.fontSize = '10px';
         contentDiv.style.marginBottom = '20px';
         contentDiv.style.fontWeight = 'bold';
-        contentDiv.style.textTransform = 'uppercase';
+        contentDiv.style.textTransform = 'uppercase' ;
         contentDiv.style.boxSizing = 'border-box';
         contentDiv.style.borderRadius = '10px';
         contentDiv.style.textAlign = 'left';
