@@ -33,7 +33,7 @@ function loadContent(niveau) {
         contentDiv.innerHTML = `
             <h3>${niveau}</h3>
             <p>Voici les exos et exercices corrigés pour le niveau ${niveau}. Sélectionnez un sujet pour plus de détails.</p>
-        `;
+        `
     }
 
         // Stylisation du contenu
