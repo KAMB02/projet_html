@@ -47,7 +47,14 @@ function loadContent(niveau) {
         `;
     } else {
         contentDiv.innerHTML = `
-            <p>Aucun disponible !.</p>
+            <p  
+            style="display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100%; 
+            text-align: center;">
+                Aucun document n'est disponible pour le moment !.
+            </p>
         `
     }
 
