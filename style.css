@@ -13,6 +13,19 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+
+.gauche img {
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
+    border-radius: 8px; /* Coins légèrement arrondis (optionnel) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide */
+}
+
+.gauche img:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'image au survol */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée au survol */
+}
+
 .centre {
     flex: 3;
     background-image: linear-gradient(rgba(0, 0, 0, 0.333), rgba(0, 0, 0, 0.393)), url("image.jpg");
@@ -118,3 +131,9 @@ ul {
     background-color: #1E8449;
     color: #ffffff;
 }
+
+.logo {
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
