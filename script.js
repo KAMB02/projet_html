@@ -14,6 +14,19 @@ function showHomeContent() {
 }
 
 
+function showPDF(pdfPath) {
+    const contentDiv = document.getElementById('content');
+    contentDiv.innerHTML = `
+        <iframe 
+            src="${pdfPath}#toolbar=0&navpanes=0&scrollbar=0" 
+            width="100%" 
+            height="462px" 
+            scrollbar="false"
+            border="0"
+            style="border: none;">
+        </iframe>
+    `;
+}
 function loadContent(niveau) {
     const contentDiv = document.getElementById('content');
 
@@ -22,30 +35,32 @@ function loadContent(niveau) {
             <h3>Cours - Licence 3</h3>
             <p>Cliquer sur un cours pour visualiser :</p>
             <ul>
-                <li><a href="../cours/algo.pdf" target="_blank" onclick="disableLink(this)">Algorithme Avancée</a></li>
-                <li><a href="../cours/bd.pdf" target="_blank" onclick="disableLink(this)">BASE DE DONNÉE</a></li>
-                <li><a href="../cours/genie.pdf" target="_blank" onclick="disableLink(this)">GENIE LOGICIEL</a></li>
-                <li><a href="../cours/maintenance.pdf" target="_blank" onclick="disableLink(this)">Maintenance</a></li>
-                <li><a href="../cours/formerise.pdf" target="_blank" onclick="disableLink(this)">MERISE</a></li>
-                <li><a href="../cours/theorie.pdf" target="_blank" onclick="disableLink(this)">THÉORIE DES LANGAGES</a></li>
-                <li><a href="../cours/ro.pdf" target="_blank" onclick="disableLink(this)">RECHERCHE OPÉRATIONNELLE</a></li>
-                <li><a href="../cours/reseau.pdf" target="_blank" onclick="disableLink(this)">FONDAMENTEAUX RÉSEAUX</a></li>
+                <li><a href="#" onclick="showPDF('../cours/algo.pdf')">Algorithme Avancée</a></li>
+                <li><a href="#" onclick="showPDF('../cours/bd.pdf')">BASE DE DONNÉE</a></li>
+                <li><a href="#" onclick="showPDF('../cours/genie.pdf')">GENIE LOGICIEL</a></li>
+                <li><a href="#" onclick="showPDF('../cours/maintenance.pdf')">Maintenance</a></li>
+                <li><a href="#" onclick="showPDF('../cours/formerise.pdf')">MERISE</a></li>
+                <li><a href="#" onclick="showPDF('../cours/theorie.pdf')">THÉORIE DES LANGAGES</a></li>
+                <li><a href="#" onclick="showPDF('../cours/ro.pdf')">RECHERCHE OPÉRATIONNELLE</a></li>
+                <li><a href="#" onclick="showPDF('../cours/reseau.pdf')">FONDAMENTEAUX RÉSEAUX</a></li>
             </ul>
         `;
-    } else if (niveau === 'Licence3') {
+    } 
+    else if (niveau === 'Licence3') {
         contentDiv.innerHTML = `
-            <h3>TD & Examen Corriger- Licence 3</h3>
-            <p>Cliquer sur un exos pour visualiser :</p>
+            <h3>TD & Examen Corrigé - Licence 3</h3>
+            <p>Cliquer sur un exercice pour visualiser :</p>
             <ul>
-                <li><a href="../exos/algo.pdf" target="_blank" onclick="disableLink(this)">Algorithme Avancée</a></li>
-                <li><a href="../exos/genie.pdf" target="_blank" onclick="disableLink(this)">GENIE LOGICIEL</a></li>
-                <li><a href="../exos/formerise.pdf" target="_blank" onclick="disableLink(this)">MERISE</a></li>
-                <li><a href="../exos/theorie.pdf" target="_blank" onclick="disableLink(this)">THÉORIE DES LANGAGES</a></li>
-                <li><a href="../exos/ro.pdf" target="_blank" onclick="disableLink(this)">RECHERCHE OPÉRATIONNELLE</a></li>
-                <li><a href="../exos/reseau.pdf" target="_blank" onclick="disableLink(this)">FONDAMENTEAUX RÉSEAUX</a></li>
+                <li><a href="#" onclick="showPDF('../exos/algo.pdf')">Algorithme Avancée</a></li>
+                <li><a href="#" onclick="showPDF('../exos/genie.pdf')">GENIE LOGICIEL</a></li>
+                <li><a href="#" onclick="showPDF('../exos/formerise.pdf')">MERISE</a></li>
+                <li><a href="#" onclick="showPDF('../exos/theorie.pdf')">THÉORIE DES LANGAGES</a></li>
+                <li><a href="#" onclick="showPDF('../exos/ro.pdf')">RECHERCHE OPÉRATIONNELLE</a></li>
+                <li><a href="#" onclick="showPDF('../exos/reseau.pdf')">FONDAMENTEAUX RÉSEAUX</a></li>
             </ul>
         `;
-    } else {
+    } 
+    else {
         contentDiv.innerHTML = `
             <p  
             style="display: flex; 
@@ -53,25 +68,26 @@ function loadContent(niveau) {
             align-items: center; 
             height: 100%; 
             text-align: center;">
-                Aucun document n'est disponible pour le moment !.
+                Aucun document n'est disponible pour le moment !
             </p>
-        `
+        `;
     }
 
-        // Stylisation du contenu
-        contentDiv.style.backgroundColor = '#f0f0f0';
-        contentDiv.style.color = '#333';
-        contentDiv.style.padding = '20px';
-        contentDiv.style.borderRadius = '15px';
-        contentDiv.style.lineHeight = '2';
-        contentDiv.style.fontSize = '10px';
-        contentDiv.style.marginBottom = '20px';
-        contentDiv.style.fontWeight = 'bold';
-        contentDiv.style.textTransform = 'uppercase';
-        contentDiv.style.boxSizing = 'border-box';
-        contentDiv.style.borderRadius = '10px';
-        contentDiv.style.textAlign = 'left';
-        contentDiv.style.fontSize = '13px';
+    // Stylisation du contenu
+    contentDiv.style.backgroundColor = '#f0f0f0';
+    contentDiv.style.color = '#333';
+
+    contentDiv.style.padding = '20px';
+    contentDiv.style.borderRadius = '15px';
+    contentDiv.style.lineHeight = '2';
+    contentDiv.style.fontSize = '10px';
+    contentDiv.style.marginBottom = '20px';
+    contentDiv.style.fontWeight = 'bold';
+    contentDiv.style.textTransform = 'uppercase';
+    contentDiv.style.boxSizing = 'border-box';
+    contentDiv.style.borderRadius = '10px';
+    contentDiv.style.textAlign = 'left';
+    contentDiv.style.fontSize = '13px';
 
 }
 
