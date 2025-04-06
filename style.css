@@ -54,7 +54,7 @@ body {
 }
 
 /* Stylisation des titres et listes */
-h3 {
+h3 { 
     color: #444;
     font-weight: bold;
 }
@@ -142,3 +142,59 @@ ul {
     border-radius: 8px;
 }
 
+/* stylisation du contenue de javascript */
+
+/* Grille des cours */
+.cours-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes de largeur égale */
+    gap: 20px; /* Espacement entre les éléments */
+    margin-top: 20px;
+}
+
+/* Élément individuel de cours */
+.cours-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cours-item:hover {
+    transform: scale(1.05); /* Agrandit légèrement au survol */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Titre du cours */
+.cours-title {
+    background-color: #2ECC71;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Titre du cours */
+.exo-title {
+    background-color: #FF8C00;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Lien pour voir le PDF */
+.cours-link {
+    padding: 10px;
+}
+
+.cours-link a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cours-link a:hover {
+    text-decoration: underline;
+}
