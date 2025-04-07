@@ -137,18 +137,13 @@ ul {
     color: #ffffff;
 }
 
-.logo {
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
-
 /* stylisation du contenue de javascript */
 
 /* Grille des cours */
 .cours-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes de largeur égale */
-    gap: 20px; /* Espacement entre les éléments */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
     margin-top: 20px;
 }
 
@@ -164,7 +159,7 @@ ul {
 }
 
 .cours-item:hover {
-    transform: scale(1.05); /* Agrandit légèrement au survol */
+    transform: scale(1.05); 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -176,7 +171,7 @@ ul {
     font-weight: bold;
 }
 
-/* Titre du cours */
+/* Titre de l'exo */
 .exo-title {
     background-color: #FF8C00;
     color: white;
