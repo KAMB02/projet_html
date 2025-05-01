@@ -1,195 +1,316 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-bg: #f8f9fa;
+    --dark-text: #2c3e50;
+    --light-text: #ecf0f1;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: century;
-    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    height: 100vh; /* Utiliser la hauteur totale de l'écran */
-    display: flex;
-    flex-direction: row; /* Organise les enfants horizontalement */
-    margin: 0;
-    font-family: Arial, sans-serif;
-    overflow-y: auto; /* Ajoute le défilement global */
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    min-height: 100vh;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+}
+
+/* Barre latérale gauche */
+.gauche {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 20px;
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow);
 }
 
 .gauche img {
-    background-color: #ffffff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
-    border-radius: 8px; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide */
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100%;
+    height: auto;
 }
 
-.gauche img:hover {
-    transform: scale(1.1); /* Agrandit légèrement l'image au survol */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Ombre plus prononcée au survol */
+.gauche h3 {
+    margin: 25px 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+    font-size: 1.2rem;
 }
 
+.gauche ul {
+    list-style: none;
+}
+
+.gauche li {
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.gauche li:hover {
+    background-color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+/* Zone centrale */
 .centre {
-    flex: 3;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.333), rgba(0, 0, 0, 0.393)), url("image.jpg");
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-    background-color: #ffffff;
-    overflow-y: auto;
-    border-radius: 8px;
-    filter: brightness(80%); /* Assombrir l'image pour mettre en valeur le texte */
+    grid-column: 2;
+    padding: 30px;
+    background-color: white;
+    min-height: 100vh;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .acc {
-    background-color: #f0f0f0;
-    color: #333;
-    padding: 20px;
-    border-radius: 15px;
-    line-height: 2;
-    font-size: 13px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.acc h3 {
+    color: var(--primary-color);
     margin-bottom: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    box-sizing: border-box;
-    text-align: left;
+    font-size: 1.8rem;
 }
 
-/* Stylisation des titres et listes */
-h3 { 
-    color: #444;
-    font-weight: bold;
+.acc p {
+    margin-bottom: 15px;
+    line-height: 1.6;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-/* Contenu dynamique */
-.content {
-    text-align: center;
-    font-size: 18px;
-    color: #555;
-}
-
-/* Partie gauche */
-.gauche {
-    flex: 1; /* Ajuste la largeur pour occuper une proportion définie (par exemple, 20%) */
-    background-color: #FF8C00; /* Orange vif */
-    padding: 15px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    color: #ffffff;
-    height: 100%;
-    max-height: 100vh;
-    border-radius:0px 0px 8px;
-    /* Permet le défilement si le contenu dépasse la hauteur */
-}
-
-/* Style des titres dans la partie gauche */
-.gauche h3 {
-    color: #ffffff;
-}
-
-/* Éléments de la liste dans la partie gauche */
-.gauche ul li {
-    background-color: #d8d5cf;
-    margin: 5px 0;
-    padding: 8px;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #111111;
-}
-
-.gauche ul li:hover {
-    background-color: #FF4500;
-    color: #ffffff;
-}
-
-/* Partie droite */
+/* Barre latérale droite */
 .droite {
-    flex: 1; /* Ajuste la largeur pour occuper une proportion définie (par exemple, 20%) */
-    background-color: #2ECC71;
-    padding: 15px;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-    color: #ffffff;
-    height: 100%;
-    max-height: 100vh;
-    border-radius:0px 8px 0px;
-    overflow-y: auto; /* Permet le défilement si le contenu dépasse la hauteur */
+    background-color: var(--light-bg);
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+    border-left: 1px solid #ddd;
 }
 
-/* Style des titres dans la partie droite */
 .droite h3 {
-    color: #ffffff;
+    margin: 25px 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+    font-size: 1.2rem;
 }
 
-/* Éléments de la liste dans la partie droite */
-.droite ul li {
-    background-color: #d8d5cf;
-    margin: 5px 0;
-    padding: 8px;
+.nav-items {
+    list-style: none;
+}
+
+.nav-item {
+    margin-bottom: 10px;
+}
+
+.nav-item a {
+    display: block;
+    padding: 10px 15px;
+    color: var(--dark-text);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.nav-item a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    transform: translateY(-5px);
+    background-color: var(--secondary-color);
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    body {
+        grid-template-columns: 200px 1fr 200px;
+    }
+    .gauche, .droite {
+        width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+    .gauche, .droite {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+    .gauche {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .gauche > div {
+        flex: 1 1 200px;
+        margin: 10px;
+    }
+    .centre {
+        grid-column: 1;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.content-section {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Bouton retour en haut */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+/* PDF Container */
+.pdf-container {
+    position: relative;
+}
+
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 8px 15px;
+    background: #4a6cf7;
+    color: white;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    color: #111111;
+    z-index: 100;
 }
 
-.droite ul li:hover {
-    background-color: #1E8449;
-    color: #ffffff;
+.back-button:hover {
+    background: #3a5bd9;
 }
 
-/* stylisation du contenue de javascript */
-
-/* Grille des cours */
+/* Cours Grid */
 .cours-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
     margin-top: 20px;
 }
 
-/* Élément individuel de cours */
 .cours-item {
-    border: 1px solid #ddd;
+    background: white;
+    padding: 15px;
     border-radius: 8px;
-    overflow: hidden;
-    text-align: center;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
 }
 
 .cours-item:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
 }
 
-/* Titre du cours */
-.cours-title {
-    background-color: #2ECC71;
+.cours-title, .exo-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2d3748;
+}
+
+.pdf-button {
+    background: #4a6cf7;
     color: white;
-    padding: 10px;
-    font-weight: bold;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
 }
 
-/* Titre de l'exo */
-.exo-title {
-    background-color: #FF8C00;
-    color: white;
-    padding: 10px;
-    font-weight: bold;
+.pdf-button:hover {
+    background: #3a5bd9;
 }
 
-/* Lien pour voir le PDF */
-.cours-link {
-    padding: 10px;
-}
-
-.cours-link a {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.cours-link a:hover {
-    text-decoration: underline;
+.no-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    text-align: center;
+    color: #718096;
 }
