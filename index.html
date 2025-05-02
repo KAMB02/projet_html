@@ -3,86 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plateforme de ressources académiques pour les étudiants de l'UFHB">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <meta property="image" content="image.png" />
-    <title>Mon site</title>
-
+    <link rel="icon" type="image/png" sizes="50x50" href="icone/moi.png">
+    <title>Archivre Kamb02</title>
 </head>
 <body>
     <!-- Barre latérale gauche -->
-    <div class="gauche">
-        <li >
-            <img src="../icone/ufhb.png" width="150px" height="90px">
-        </li>  
-        <h3>Cours</h3>
-        <ul>
-            <li onclick="loadContent('Licence 1')">Licence 1</li>
-            <li onclick="loadContent('Licence 2')">Licence 2</li>
-            <li onclick="loadContent('Licence 3')">Licence 3</li>
-            <li onclick="loadContent('Master')">Master</li>
-            <li onclick="loadContent('Doctorat')">Doctorat</li>
-        </ul>
-        <h3>TD & Examen Corriger</h3>
-        <ul>
-            <li onclick="loadContent('Licence1')">Licence 1</li>
-            <li onclick="loadContent('Licence2')">Licence 2</li>
-            <li onclick="loadContent('Licence3')">Licence 3</li>
-            <li onclick="loadContent('Masterm')">Master</li>
-            <li onclick="loadContent('Doctoratd')">Doctorat</li>
-        </ul>
-    </div>
+    <aside class="gauche">
+        <div>
+            <img src="icone/ufhb.png" alt="Logo UFHB" class="logo">
+            
+            <h3><i class="fas fa-book"></i> Cours</h3>
+            <ul>
+                <li onclick="loadContent('Licence 1')"><i class="fas fa-graduation-cap"></i> Licence 1</li>
+                <li onclick="loadContent('Licence 2')"><i class="fas fa-graduation-cap"></i> Licence 2</li>
+                <li onclick="loadContent('Licence 3')"><i class="fas fa-graduation-cap"></i> Licence 3</li>
+                <li onclick="loadContent('Master')"><i class="fas fa-user-graduate"></i> Master</li>
+                <li onclick="loadContent('Doctorat')"><i class="fas fa-user-tie"></i> Doctorat</li>
+            </ul>
+        </div>
+        
+        <div>
+            <h3><i class="fas fa-tasks"></i> TD & Examens</h3>
+            <ul>
+                <li onclick="loadContent('Licence1')"><i class="fas fa-file-alt"></i> Licence 1</li>
+                <li onclick="loadContent('Licence2')"><i class="fas fa-file-alt"></i> Licence 2</li>
+                <li onclick="loadContent('Licence3')"><i class="fas fa-file-alt"></i> Licence 3</li>
+                <li onclick="loadContent('Masterm')"><i class="fas fa-file-contract"></i> Master</li>
+                <li onclick="loadContent('Doctoratd')"><i class="fas fa-file-signature"></i> Doctorat</li>
+            </ul>
+        </div>
+    </aside>
 
     <!-- Zone centrale -->
-    <div class="centre">
+    <main class="centre">
         <div class="content" id="content">
-            <div class="acc">
-                <h3>Bienvenue sur notre site de cours et exercices</h3>
-                <p><br>Sélectionnez un niveau académique à gauche pour afficher les cours et exercices correspondants ici.</p>
-                <p>Vous pouvez également consulter les TD et examens corrigés.</p>
-                <p>Nous vous souhaitons une bonne navigation !</p>
-                <p>Pour toute question ou suggestion, n'hésitez pas à nous contacter via la section "Nous suivre" à droite.</p>
-                <p>Nous sommes là pour vous aider dans votre apprentissage.</p>
-                <p>Merci de votre visite !</p>
-                <p>Nous espérons que vous trouverez les ressources utiles pour vos études.</p>
-                <p>Bonne chance dans vos études et à bientôt !</p>
-            
-            </div>
-           </div>
-    </div>
+            <section class="acc content-section">
+                <h3>Bienvenue sur notre plateforme de ressources académiques</h3>
+                <p>Sélectionnez un niveau académique dans le menu de gauche pour accéder aux cours et exercices correspondants.</p>
+                <p>Notre plateforme offre :</p>
+                <ul style="margin-left: 20px; margin-bottom: 15px;">
+                    <li>Cours complets par niveau</li>
+                    <li>TD corrigés et expliqués</li>
+                    <li>Annales d'examens avec solutions</li>
+                    <li>Ressources pédagogiques variées</li>
+                </ul>
+                <p>Pour toute question ou suggestion, n'hésitez pas à nous contacter via les liens dans la barre latérale droite.</p>
+                <div style="margin-top: 30px; padding: 20px; background-color: #f0f8ff; border-radius: 8px; border-left: 4px solid var(--secondary-color);">
+                    <h4 style="color: var(--secondary-color); margin-bottom: 10px;"><i class="fas fa-lightbulb"></i> Conseil du jour</h4>
+                    <p>Créez un planning de révision régulier pour mieux assimiler les cours. La régularité est la clé de la réussite !</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
     <!-- Barre latérale droite -->
-    <div class="droite">
-        <h3>Informations</h3>
+    <aside class="droite">
+        <h3><i class="fas fa-info-circle"></i> Informations</h3>
         <ul class="nav-items">
             <li class="nav-item">
-                <a href="#" onclick="showHomeContent()">Accueil</a>
+                <a href="#" onclick="showHomeContent()"><i class="fas fa-home"></i> Accueil</a>
             </li>
             <li class="nav-item">
-                <a href="https://w.univ-fhb.edu.ci/">UFHB</a>
+                <a href="https://www.univ-fhb.edu.ci/" target="_blank"><i class="fas fa-university"></i> Site UFHB</a>
             </li>          
         </ul>  
-        <h3>Nous suivre </h3>  
-        <ul>
-            <a href="https://github.com/KAMB02" target="_blank">
-                <img src="../icone/git.png" width="50px" > 
+        
+        <h3><i class="fas fa-share-alt"></i> Nous suivre</h3>  
+        <div class="social-links">
+            <a href="https://github.com/KAMB02" target="_blank" title="GitHub">
+                <img src="icone/git.png" alt="GitHub">
             </a>
-            <a href="https://www.facebook.com/allouanbienvenue.kadjo" target="_blank">                
-                <img src="../icone/fb.png" width="55px" height="50px">
+            <a href="https://www.facebook.com/allouanbienvenue.kadjo" target="_blank" title="Facebook">                
+                <img src="icone/fb.png" alt="Facebook">
             </a>  
-        </ul> 
-        <h3>Contactez Nous</h3>
-        <ul>   
-             <a href="https://wa.me/+2250143428561" target="_blank">
-                <img src="../icone/what.png" width="55.7px" >
+        </div>
+        
+        <h3><i class="fas fa-envelope"></i> Contactez-nous</h3>
+        <div class="social-links">
+            <a href="https://wa.me/+2250143428561" target="_blank" title="WhatsApp">
+                <img src="icone/what.png" alt="WhatsApp">
             </a> 
-            <a href="mailto:kallouan25@gmail.com">
-                <img src="../icone/gmail.png" width="70px" height="51px" >
+            <a href="mailto:kallouan25@gmail.com" title="Email">
+                <img src="icone/gmail.png" alt="Email">
             </a>
-            
-        </ul>
+        </div>
 
+        <div style="margin-top: 30px; padding: 15px; background-color: white; border-radius: 8px; box-shadow: var(--shadow);">
+            <h4 style="font-size: 1rem; margin-bottom: 10px;"><i class="fas fa-calendar-alt"></i> Événements</h4>
+            <p style="font-size: 0.9rem;">Prochaines inscriptions : 15 septembre 2023</p>
+        </div>
+    </aside>
+
+    <!-- Bouton retour en haut -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
     </div>
-    
 
+    <script src="script.js"></script>
 </body>
 </html>
